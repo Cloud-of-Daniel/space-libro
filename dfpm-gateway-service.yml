@@ -27,7 +27,7 @@ spring:
           predicates:
             - Path=/usuario/**
 
-        - id: dfpm-enverollment-service
-          uri: lb://dfpm-enverollment-service
+        - id: dfpm-prestamo-service
+          uri: lb://dfpm-prestamo-service
           predicates:
-            - Path=/enrollment/**
+            - Path=/prestamo/**
