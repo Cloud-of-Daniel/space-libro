@@ -2,10 +2,10 @@ server:
   port: 2023
 spring:
   application:
-    name: dfpm-enverollment-service
+    name: dfpm-prestamo-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/dfpm-enverollment
+    url: jdbc:postgresql://localhost:5432/dfpm-prestamo
     username: postgres
     password: 123456
     driver-class-name: org.postgresql.Driver
@@ -28,6 +28,6 @@ springdoc:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:2020/eureka
+      defaultZone: http://localhost:3030/eureka
   instance:
     hostname: localhost
