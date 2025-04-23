@@ -1,10 +1,10 @@
 server:
-  port: 2999
+  port: 3999
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:2020/eureka
+      defaultZone: http://localhost:3030/eureka
       #defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
   instance:
     hostname: localhost
@@ -17,10 +17,10 @@ spring:
         locator:
           enable: true
       routes:
-        - id: dfpm-student-service
-          uri: lb://dfpm-student-service
+        - id: dfpm-libro-service
+          uri: lb://dfpm-libro-service
           predicates:
-            - Path=/student/**, /profession/**
+            - Path=/libro/**, /profession/**
 
         - id: dfpm-course-service
           uri: lb://dfpm-course-service
