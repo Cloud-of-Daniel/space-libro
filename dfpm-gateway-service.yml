@@ -22,10 +22,10 @@ spring:
           predicates:
             - Path=/libro/**, /profession/**
 
-        - id: dfpm-course-service
-          uri: lb://dfpm-course-service
+        - id: dfpm-libro-service
+          uri: lb://dfpm-libro-service
           predicates:
-            - Path=/course/**
+            - Path=/libro/**
 
         - id: dfpm-enverollment-service
           uri: lb://dfpm-enverollment-service
