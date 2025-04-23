@@ -1,11 +1,11 @@
 server:
-  port: 2022
+  port: 3032
 spring:
   application:
-    name: dfpm-course-service
+    name: dfpm-usuario-service
 
   datasource:
-    url: jdbc:mysql://localhost:3306/dfpm-course
+    url: jdbc:mysql://localhost:3306/dfpm_usuario
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -24,6 +24,6 @@ springdoc:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:2020/eureka
+      defaultZone: http://localhost:3030/eureka
   instance:
     hostname: localhost
