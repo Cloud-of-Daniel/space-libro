@@ -3,15 +3,22 @@ server:
   port: ${PORT:${SERVERS_PORT:0}}
 
 spring:
-  jpa:
-    hibernate.ddl-auto: update
-    generate-ddl: true
-    show-sql: true
+  application:
+    name: dfpm-libro-service
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ms_auth
-    username: root
-    password:
+    url: jdbc:postgresql://localhost:5432/dfpm-auth
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      platform: postgres
 
 eureka:
   client:
