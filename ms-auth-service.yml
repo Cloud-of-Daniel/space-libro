@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: dfpm-libro-service
+    name: ms-auth-service
   datasource:
     url: jdbc:postgresql://localhost:5432/dfpm-auth
     username: postgres
