@@ -34,6 +34,8 @@ spring:
           uri: lb://dfpm-prestamo-service
           predicates:
             - Path=/prestamo/**
+          filters:
+            - AuthFilter
             
         - id: ms-auth-service
           uri: lb://ms-auth-service
