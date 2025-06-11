@@ -27,15 +27,13 @@ spring:
           uri: lb://dfpm-usuario-service
           predicates:
             - Path=/usuario/**
-          filters:
-            - AuthFilter
+
 
         - id: dfpm-prestamo-service
           uri: lb://dfpm-prestamo-service
           predicates:
             - Path=/prestamo/**
-          filters:
-            - AuthFilter
+
             
         - id: ms-auth-service
           uri: lb://ms-auth-service
